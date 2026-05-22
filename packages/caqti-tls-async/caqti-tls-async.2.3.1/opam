@@ -1,21 +1,21 @@
 opam-version: "2.0"
-synopsis: "Miou support for Caqti"
+synopsis: "TLS support for caqti-async"
 maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
-authors: "Romain Calascibetta <romain.calascibetta@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
 license: "LGPL-3.0-or-later WITH LGPL-3.0-linking-exception"
 homepage: "https://github.com/paurkedal/ocaml-caqti/"
 doc: "https://paurkedal.github.io/ocaml-caqti/index.html"
 bug-reports: "https://github.com/paurkedal/ocaml-caqti/issues"
 depends: [
-  "caqti" {>= "2.2.3" & < "2.4.0~"}
+  "async_kernel" {>= "v0.11.0"}
+  "async_unix" {>= "v0.11.0"}
+  "caqti" {>= "2.1.0" & < "2.4.0~"}
+  "caqti-async" {>= "2.1.0" & < "2.4.0~"}
   "dune" {>= "3.9"}
-  "miou" {>= "0.3.0"}
-  "logs"
-  "ocaml" {>= "5.0.0~"}
-  "alcotest" {with-test & >= "1.5.0"}
-  "caqti-driver-sqlite3" {with-test}
-  "cmdliner" {with-test & >= "1.1.0"}
-  "mirage-crypto-rng-miou-unix" {with-test}
+  "ocaml"
+  "tls"
+  "tls-async"
+  "ppx_jane"
   "odoc" {with-doc}
 ]
 build: [
@@ -32,4 +32,3 @@ url {
     "sha512=f25e94f05f6e53506cd60e19b9339f0b11e6a13c8b1f0efba73c65f59ab856e19571f84897034199e644749925ce29df9c0ee22cfcf1478f4445e464c0aa8462"
   ]
 }
-x-maintenance-intent: ["(latest)"]

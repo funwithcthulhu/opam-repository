@@ -1,21 +1,18 @@
 opam-version: "2.0"
-synopsis: "Miou support for Caqti"
+synopsis: "MariaDB driver for Caqti using C bindings"
 maintainer: "Petter A. Urkedal <paurkedal@gmail.com>"
-authors: "Romain Calascibetta <romain.calascibetta@gmail.com>"
+authors: "Petter A. Urkedal <paurkedal@gmail.com>"
 license: "LGPL-3.0-or-later WITH LGPL-3.0-linking-exception"
 homepage: "https://github.com/paurkedal/ocaml-caqti/"
 doc: "https://paurkedal.github.io/ocaml-caqti/index.html"
 bug-reports: "https://github.com/paurkedal/ocaml-caqti/issues"
 depends: [
-  "caqti" {>= "2.2.3" & < "2.4.0~"}
-  "dune" {>= "3.9"}
-  "miou" {>= "0.3.0"}
-  "logs"
-  "ocaml" {>= "5.0.0~"}
   "alcotest" {with-test & >= "1.5.0"}
-  "caqti-driver-sqlite3" {with-test}
+  "ocaml"
+  "caqti" {>= "2.3.0" & < "2.4.0~"}
   "cmdliner" {with-test & >= "1.1.0"}
-  "mirage-crypto-rng-miou-unix" {with-test}
+  "dune" {>= "3.9"}
+  "mariadb" {>= "1.3.0"}
   "odoc" {with-doc}
 ]
 build: [
